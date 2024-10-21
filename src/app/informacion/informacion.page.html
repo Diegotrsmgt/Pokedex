@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>informacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="pokemon">
+    <img [src]="pokemon.image.hires" />
+    <ion-card-header>
+      <ion-card-title>{{pokemon.name.english}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{pokemon.description}}
+    </ion-card-content>  
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          HP: {{pokemon.base?.HP}}
+        </ion-item>
+      </ion-list>
+    </ion-card-content> 
+  </ion-card>
+</ion-content>

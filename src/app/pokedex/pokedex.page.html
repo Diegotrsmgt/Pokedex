@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>pokedex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+   <ion-list>
+      <ion-item *ngFor="let pokemon of datos">
+        <img [src]="pokemon.image.thumbnail" slot="start">
+        <h3>{{pokemon.name.english}}</h3><br>
+        <p>{{pokemon.type[0] }}</p>         
+        <ion-button (click)="verDetalle(pokemon.id)" slot="end" color="primary">Ver detalle</ion-button>
+      </ion-item>  
+      
+   </ion-list>
+</ion-content>
